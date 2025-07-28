@@ -10,11 +10,11 @@
       "source": "/:path*",
       "headers": [
         {
-          "key": "X-Original-Host",  // 传递原始Host
+          "key": "X-Original-Host", 
           "value": "$host"
         },
         {
-          "key": "X-Original-Path",  // 传递完整路径（含查询参数）
+          "key": "X-Original-Path", 
           "value": "$url"
         }
       ]
