@@ -1,7 +1,3 @@
-[[redirects]]
-  from = "/*"
-  # to = "https://origin.robnot.us.kg/"
-  to = "http://221.226.197.181:25803/host=:host&path=:splat"
-  status = 200
-  # force = true
-  headers = {X-From = "Netlify"}
+[[edge_functions]]
+  path = "/*"
+  function = "proxy"
