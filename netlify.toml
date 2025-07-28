@@ -4,4 +4,7 @@
   to = "http://221.226.197.181:25803/"
   status = 200
   # force = true
-  headers = {X-From = "Netlify", X-Original-Host = "{host}", X-Original-Path = "{path}"}
+  # headers = {X-From = "Netlify", X-Original-Host = "{host}", X-Original-Path = "{path}"}
+  [redirects.headers]
+    X-Original-Host = "{host}"
+    X-Original-Path = "{path}"
