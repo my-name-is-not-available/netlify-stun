@@ -3,11 +3,8 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "https://origin.robnot.us.kg/", 
-      "headers": {
-        "X-Original-Host": "$host", 
-        "X-Original-Path": "$1" 
-      }
+      "dest": "/proxy",
+      "continue": true
     }
   ]
 }
