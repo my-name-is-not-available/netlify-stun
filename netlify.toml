@@ -1,3 +1,12 @@
+[[redirects]]
+  from = "/*"
+  to = "/proxy"
+  status = 200
+  force = false
+  [redirects.headers]
+    X-From = "Netlify"
+
+# 边缘函数声明
 [[edge_functions]]
-  path = "/*"
   function = "proxy"
+  path = "/*"
