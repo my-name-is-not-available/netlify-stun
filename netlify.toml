@@ -6,5 +6,5 @@
   # force = true
   # headers = {X-From = "Netlify", X-Original-Host = "{host}", X-Original-Path = "{path}"}
   [redirects.headers]
-    X-Original-Host = "{host}"
-    X-Original-Path = "{path}"
+    X-Original-Host = ":host"
+    X-Original-Path = ":path"
