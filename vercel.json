@@ -1,23 +1,13 @@
 {
-  "rewrites": [
+  "version": 2,
+  "routes": [
     {
-      "source": "/:path*",
-      "destination": "https://origin.robnot.us.kg/:path*"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/:path*",
-      "headers": [
-        {
-          "key": "X-Original-Host", 
-          "value": "$host"
-        },
-        {
-          "key": "X-Original-Path", 
-          "value": "$url"
-        }
-      ]
+      "src": "/(.*)",
+      "dest": "https://origin.robnot.us.kg/", 
+      "headers": {
+        "X-Original-Host": "$host", 
+        "X-Original-Path": "$1" 
+      }
     }
   ]
 }
