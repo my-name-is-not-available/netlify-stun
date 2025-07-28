@@ -1,0 +1,16 @@
+[[redirects]]
+  # 匹配形如 https://x.robnot.us.kg/page 的URL
+  # 第一个捕获组是子域名(x)，第二个捕获组是路径(page)
+  from = "^https://([a-z0-9-]+)\\.robnot\\.us\\.kg/(.*)$"
+  # 反向代理到 https://x.stun.robnot.us.kg/page
+  to = "https://$1.stun.robnot.us.kg/$2"
+  # 启用反向代理模式（200状态码表示透明代理）
+  status = 200
+  # 启用正则表达式匹配
+  force = true
+  # 可选：添加自定义请求头
+  headers = {
+    "X-From" = "Netlify",
+    "X-Proxy" = "true"
+  }
+    
