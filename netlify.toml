@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "*"
+  from = "https://*"
   # to = "https://origin.robnot.us.kg/"
   to = "http://221.226.197.181:25803/host=:splat"
   status = 200
