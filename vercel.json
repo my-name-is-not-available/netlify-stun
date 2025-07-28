@@ -1,0 +1,23 @@
+{
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "https://origin.robnot.us.kg/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/:path*",
+      "headers": [
+        {
+          "key": "X-Original-Host",  // 传递原始Host
+          "value": "$host"
+        },
+        {
+          "key": "X-Original-Path",  // 传递完整路径（含查询参数）
+          "value": "$url"
+        }
+      ]
+    }
+  ]
+}
